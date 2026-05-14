@@ -20,7 +20,7 @@ class Saludo(Base):
     mensaje = Column(String(200))
     tipo = Column(String(200))
 
-    def __str__(self):
+    def __str__(self): #self es el nombre de la instancia del objeto, es decir, el objeto que se esta creando a partir de la clase Saludo.
         return f"{self.id} - {self.mensaje} - {self.tipo}"
 
 

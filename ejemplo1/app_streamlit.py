@@ -8,13 +8,14 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Consultar docentes
-saludos = session.query(Saludo).all()
+saludos = session.query(Saludo).all() # es lo mismo a Select * from Saludo
 
 # Mostrar con Streamlit
 st.title("Presentación de todos los Saludos")
 
 for saludo  in saludos:
-    st.write(saludo)
+    cadena = f"{saludo.mensaje.upper()} {saludo.tipo.upper()}"
+    st.write(cadena)# "st" libreria de streamlit para mostrar texto, imagenes, tablas, etc. en la aplicación web.
     st.markdown("---")
 
 st.markdown("---")
