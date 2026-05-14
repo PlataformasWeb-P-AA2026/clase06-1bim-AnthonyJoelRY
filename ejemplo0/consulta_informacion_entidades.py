@@ -44,7 +44,7 @@ cadena_consulta_sql = "SELECT * from Autor"
 cursor.execute(cadena_consulta_sql)
 # la información resultante se la obtiene del método fetchall de cursor.
 informacion = cursor.fetchall()
-
+print(informacion)
 # se realiza un ciclo repetitivo para recorrer la secuencia de información
 # resultante
 for d in informacion:
